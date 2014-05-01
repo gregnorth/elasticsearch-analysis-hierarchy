@@ -7,12 +7,18 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <elasticsearch.version>0.18.5</elasticsearch.version>
+        <elasticsearch.version>0.90.7</elasticsearch.version>
         <lucene.version>3.5.0</lucene.version>
         <junit.version>4.10</junit.version>
         <java.source.version></java.source.version>
         <java.target.version></java.target.version>
     </properties>
+    
+    <scm>
+	  <url>https://github.com/gregnorth/elasticsearch-customisations</url>
+	  <developerConnection>scm:git:git@github.com:gregnorth/elasticsearch-customisations.git</developerConnection>
+      <connection>scm:git:git@github.com:gregnorth/elasticsearch-customisations.git</connection>
+	</scm>
 
     <repositories>
         <repository>

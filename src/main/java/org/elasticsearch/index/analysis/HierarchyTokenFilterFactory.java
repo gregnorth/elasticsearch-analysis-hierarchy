@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package com.springyweb.elasticsearch.index.analysis;
+package org.elasticsearch.index.analysis;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.elasticsearch.common.inject.Inject;
@@ -36,11 +36,11 @@ import org.elasticsearch.index.settings.IndexSettings;
  */
 
 @AnalysisSettingsRequired
-public class TokenCountFilterFactory extends AbstractTokenFilterFactory {
+public class HierarchyTokenFilterFactory extends AbstractTokenFilterFactory {
 
     @Inject
-    public TokenCountFilterFactory(Index index, @IndexSettings Settings indexSettings,
-                                      @Assisted String name, @Assisted Settings settings) {
+    public HierarchyTokenFilterFactory(Index index, @IndexSettings Settings indexSettings,
+                                       @Assisted String name, @Assisted Settings settings) {
     	
     	super(index, indexSettings, name, settings);
     }

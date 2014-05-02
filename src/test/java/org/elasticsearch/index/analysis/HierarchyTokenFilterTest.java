@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.springyweb.elasticsearch.index.analysis;
+package org.elasticsearch.index.analysis;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -16,12 +16,12 @@ import org.junit.Test;
  * @author si
  *
  */
-public class TokenCountFilterTest {
+public class HierarchyTokenFilterTest {
 
     private class TestAnalyzer extends Analyzer {
       @Override
       public TokenStream tokenStream(final String fieldName, final Reader reader) {
-        return new TokenCountFilter(new PathHierarchyTokenizer(reader));
+        return new HierarchyTokenFilter(new PathHierarchyTokenizer(reader));
       }   
     }
     

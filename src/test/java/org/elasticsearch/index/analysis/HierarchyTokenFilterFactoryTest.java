@@ -1,6 +1,6 @@
 /** * 
  */
-package com.springyweb.elasticsearch.index.analysis;
+package org.elasticsearch.index.analysis;
 
 import java.io.StringReader;
 
@@ -16,13 +16,13 @@ import static org.junit.Assert.*;
  * @author si
  *
  */
-public class TokenCountFilterFactoryTest {
+public class HierarchyTokenFilterFactoryTest {
 	
 	@Test
 	public void factoryMethod () {
 		Index index = new Index("test");
 		Settings settings = Builder.EMPTY_SETTINGS;
-		TokenCountFilterFactory tokenCountFilterFactory = new TokenCountFilterFactory(index, settings, "tokenCountFilterFactory", settings);
+        HierarchyTokenFilterFactory tokenCountFilterFactory = new HierarchyTokenFilterFactory(index, settings, "tokenCountFilterFactory", settings);
 		PathHierarchyTokenizer pathHierarchyTokenizer = new PathHierarchyTokenizer(new StringReader("test"));
 		TokenStream tokenStream = tokenCountFilterFactory.create(pathHierarchyTokenizer);
 		assertEquals(TokenCountFilter.class, tokenStream.getClass());

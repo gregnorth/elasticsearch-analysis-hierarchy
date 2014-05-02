@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.springyweb.elasticsearch.index.analysis;
+package org.elasticsearch.index.analysis;
 
 import java.io.IOException;
 
@@ -15,12 +15,12 @@ import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
  * Prepends the count of the token in the stream to the term stored in the index 
  * 
  */
-public class TokenCountFilter extends TokenFilter {
+public class HierarchyTokenFilter extends TokenFilter {
 
 	private final CharTermAttribute termAtt = addAttribute(CharTermAttribute.class);
 	private int count = 0;
 	
-	public TokenCountFilter(final TokenStream input) {
+	public HierarchyTokenFilter(final TokenStream input) {
 		super(input);
 	}
 	

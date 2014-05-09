@@ -15,12 +15,12 @@ import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
  * Prepends the count of the token in the stream to the term stored in the index 
  * 
  */
-public class HierarchyTokenFilter extends TokenFilter {
+public class TokenCountFilter extends TokenFilter {
 
 	private final CharTermAttribute termAtt = addAttribute(CharTermAttribute.class);
 	private int count = 0;
 	
-	public HierarchyTokenFilter(final TokenStream input) {
+	public TokenCountFilter(final TokenStream input) {
 		super(input);
 	}
 	
@@ -34,7 +34,8 @@ public class HierarchyTokenFilter extends TokenFilter {
 			final char[] countChars = String.valueOf(this.count++).toCharArray();
 			final int newLength = termAtt.length() + countChars.length;
 			final char[] resizedBuffer = termAtt.resizeBuffer(newLength);
-			termAtt.setLength(newLength);
+
+            termAtt.setLength(newLength);
 			System.arraycopy(resizedBuffer, 0, resizedBuffer, countChars.length, termAtt.length());
 			System.arraycopy(countChars, 0, resizedBuffer, 0, countChars.length);
 		}

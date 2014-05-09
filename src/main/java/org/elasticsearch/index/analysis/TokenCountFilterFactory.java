@@ -24,23 +24,21 @@ import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.inject.assistedinject.Assisted;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.index.Index;
-import org.elasticsearch.index.analysis.AbstractTokenFilterFactory;
-import org.elasticsearch.index.analysis.AnalysisSettingsRequired;
 import org.elasticsearch.index.settings.IndexSettings;
 
 /**
  * @author si<si@springyweb.com>
  * 
- * Factory for returning a TokenCountFilter for a given TokenSteam 
+ * Factory for returning a TokenCountFilter for a given TokenSteam
  * 
  */
 
 @AnalysisSettingsRequired
-public class HierarchyTokenFilterFactory extends AbstractTokenFilterFactory {
+public class TokenCountFilterFactory extends AbstractTokenFilterFactory {
 
     @Inject
-    public HierarchyTokenFilterFactory(Index index, @IndexSettings Settings indexSettings,
-                                       @Assisted String name, @Assisted Settings settings) {
+    public TokenCountFilterFactory(Index index, @IndexSettings Settings indexSettings,
+                                   @Assisted String name, @Assisted Settings settings) {
     	
     	super(index, indexSettings, name, settings);
     }

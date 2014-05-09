@@ -21,10 +21,10 @@ package org.elasticsearch.index.analysis;
 
 /**
  */
-public class HierarchyAnalysisBinderProcessor extends AnalysisModule.AnalysisBinderProcessor {
+public class TokenCountAnalysisBinderProcessor extends AnalysisModule.AnalysisBinderProcessor {
 
     @Override
     public void processTokenFilters(TokenFiltersBindings tokenFiltersBindings) {
-        tokenFiltersBindings.processTokenFilter("hierarchy", HierarchyTokenFilterFactory.class);
+        tokenFiltersBindings.processTokenFilter("token_count", TokenCountFilterFactory.class);
     }
 }

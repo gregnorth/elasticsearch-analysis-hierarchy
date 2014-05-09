@@ -1,6 +1,9 @@
+.idea
+.idea/*
 target
 .classpath
 .project
 .settings/org.eclipse.jdt.core.prefs
 .settings/org.maven.ide.eclipse.prefs
-.iml
+*.iml
+atlassian-ide-plugin.xml

@@ -1,25 +1,25 @@
 package org.elasticsearch.plugin.analysis;
 
 import org.elasticsearch.index.analysis.AnalysisModule;
-import org.elasticsearch.index.analysis.HierarchyAnalysisBinderProcessor;
+import org.elasticsearch.index.analysis.TokenCountAnalysisBinderProcessor;
 import org.elasticsearch.plugins.AbstractPlugin;
 
 /**
  *
  */
-public class AnalysisHierarchyPlugin extends AbstractPlugin {
+public class AnalysisTokenCountPlugin extends AbstractPlugin {
 
     @Override
     public String name() {
-        return "analysis-hierarchy";
+        return "analysis-token-count";
     }
 
     @Override
     public String description() {
-        return "Hierarchical token count support";
+        return "Token count filter support";
     }
 
     public void onModule(AnalysisModule module) {
-        module.addProcessor(new PhoneticAnalysisBinderProcessor());
-    }
+       module.addProcessor(new TokenCountAnalysisBinderProcessor());
+   }
 }

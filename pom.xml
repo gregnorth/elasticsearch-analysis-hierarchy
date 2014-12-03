@@ -18,9 +18,9 @@
     </properties>
     
     <scm>
-	  <url>https://github.com/gregnorth/elasticsearch-analysis-hierarchy</url>
-	  <developerConnection>scm:git:git@github.com:gregnorth/elasticsearch-analysis-hierarchy.git</developerConnection>
-      <connection>scm:git:git@github.com:gregnorth/elasticsearch-analysis-hierarchy.git</connection>
+	  <url>https://github.com/gregnorth/elasticsearch-token-count</url>
+	  <developerConnection>scm:git:git@github.com:gregnorth/elasticsearch-token-count.git</developerConnection>
+      <connection>scm:git:git@github.com:gregnorth/elasticsearch-token-count.git</connection>
 	</scm>
 
     <repositories>

@@ -5,12 +5,12 @@
     <name>elasticsearch-analysis-token-count</name>
     <groupId>com.gregnorth.elasticsearch.plugins</groupId>
     <artifactId>elasticsearch-analysis-token-count</artifactId>
-    <version>0.0.3</version>
+    <version>0.1.0</version>
     <packaging>jar</packaging>
     <inceptionYear>2014</inceptionYear>
 
     <properties>
-        <elasticsearch.version>0.90.7</elasticsearch.version>
+        <elasticsearch.version>1.4.0</elasticsearch.version>
         <lucene.version>4.5.1</lucene.version>
         <junit.version>4.10</junit.version>
         <java.source.version>1.7</java.source.version>
